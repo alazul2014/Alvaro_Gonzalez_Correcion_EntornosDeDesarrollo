@@ -8,7 +8,7 @@ package com.mycompany.gonzalezmolinaalvaroexamenentornos;
  *
  * @author alvaro.gonzalez12
  */
-public class AGM_Rectangulo {
+class AGM_Rectangulo {
     
 
     int id;
@@ -59,5 +59,13 @@ public class AGM_Rectangulo {
     public String toString() {
         return "Rectangulo{" + "id=" + id + ", ladoA=" + ladoA + ", ladoB=" + ladoB + ", Color=" + Color + '}';
     } 
+    
+    // Metodo para calcular el area de un rectangulo
+    public static double calcularAreaRectangulo(AGM_Rectangulo rectangulo) {
+        double ladoA = rectangulo.getLadoA();
+        double ladoB = rectangulo.getLadoB();
+        return ladoA * ladoB;
+    }
+    
 }
     

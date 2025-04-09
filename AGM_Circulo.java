@@ -8,7 +8,7 @@ package com.mycompany.gonzalezmolinaalvaroexamenentornos;
  *
  * @author alvaro.gonzalez12
  */
-public class AGM_Circulo {
+class AGM_Circulo {
 
     private int id;
     private double radio;
@@ -59,5 +59,11 @@ public class AGM_Circulo {
         this.color = color;
     }
     
+    // Metodo para calcular el area de un circulo
+    public static double calcularAreaCirculo(AGM_Circulo circulo) {
+        return circulo.getRadio() * circulo.getRadio() * Math.PI;
+    }
+    
 }
 
+git reset --hard HEAD~1
