@@ -11,28 +11,28 @@ package com.mycompany.gonzalezmolinaalvaroexamenentornos;
 public class Main {
 
     public static void main(String[] args) {
-
+        // Crear instancias de círculo y rectángulo
         AGM_Circulo circulo1 = new AGM_Circulo(3, 3, "verde");
         AGM_Rectangulo rectangulo1 = new AGM_Rectangulo(3, 3.0, 3.0, "rojo");
+        
+        // Llamada a métodos extraídos
+        double areaRectangulo = AGM_Rectangulo.calcularAreaRectangulo(rectangulo1);
+        double areaCirculo = AGM_Circulo.calcularAreaCirculo(circulo1);
+        double diferencia = calcularDiferencia(areaRectangulo, areaCirculo);
 
-        // Calcular area rectangulo
-        double ladoA = rectangulo1.getLadoA();
-        double ladoB = rectangulo1.getLadoB();
-        double area1 = ladoA * ladoB;
-        System.out.println("Area cuadrado: " + area1);
-
-        // Calcular area circulo
-        double radio1 = circulo1.getRadio();
-        double area2 = radio1 * radio1 * 3.14;
-        System.out.println("Area circulo: " + area2);
-
-        // Calcular diferencia entre areas
-        double diferencia = area1 - area2;
-        System.out.println("Diferencia areas: " + diferencia);
-
-        // Imprimir datos
-        System.out.println("Cuadrado: " + rectangulo1);
+        // Imprimir resultados
+        System.out.println("Area del rectangulo: " + areaRectangulo);
+        System.out.println("Area del circulo: " + areaCirculo);
+        System.out.println("Diferencia entre areas: " + diferencia);
+        
+        // Imprimir los datos de los objetos
+        System.out.println("Rectangulo: " + rectangulo1);
         System.out.println("Circulo: " + circulo1);
-        System.out.println("Diferencia: " + diferencia);
+    }
+
+
+    // Metodo para calcular la diferencia entre areas
+    public static double calcularDiferencia(double areaRectangulo, double areaCirculo) {
+        return areaRectangulo - areaCirculo;
     }
 }

@@ -59,6 +59,10 @@ class AGM_Circulo {
         this.color = color;
     }
     
+    // Metodo para calcular el area de un circulo
+    public static double calcularAreaCirculo(AGM_Circulo circulo) {
+        return circulo.getRadio() * circulo.getRadio() * Math.PI;
+    }
     
 }
 

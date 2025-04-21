@@ -60,6 +60,12 @@ class AGM_Rectangulo {
         return "Rectangulo{" + "id=" + id + ", ladoA=" + ladoA + ", ladoB=" + ladoB + ", Color=" + Color + '}';
     } 
     
+    // Metodo para calcular el area de un rectangulo
+    public static double calcularAreaRectangulo(AGM_Rectangulo rectangulo) {
+        double ladoA = rectangulo.getLadoA();
+        double ladoB = rectangulo.getLadoB();
+        return ladoA * ladoB;
+    }
     
 }
     
